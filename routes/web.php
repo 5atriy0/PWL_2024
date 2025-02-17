@@ -19,54 +19,54 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 
-// Route::get('/hello', function () {
-//     return 'Hello World';
-// });
+Route::get('/hello', function () {
+    return 'Hello World';
+});
 
-// Route::get('/world', function () {
-//     return 'World';
-// });
+Route::get('/world', function () {
+    return 'World';
+});
 
 
-// Route::get('/', function () {
-//     return 'Selamat Datang';
-// });
+Route::get('/', function () {
+    return 'Selamat Datang';
+});
 
-// Route::get('/about', function () {
-//     return "NIM: 2341720249 <br> Nama: Satriyo Bagus Susianto";
-// });
+Route::get('/about', function () {
+    return "NIM: 2341720249 <br> Nama: Satriyo Bagus Susianto";
+});
 
-// Route::get('/user/{name}', function ($name) {
-//     return 'Nama saya '.$name;
-// });
+Route::get('/user/{name}', function ($name) {
+    return 'Nama saya '.$name;
+});
 
-// Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
-//     return 'Pos ke-'.$postId." Komentar ke-: ".$commentId;
-// });
+Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
+    return 'Pos ke-'.$postId." Komentar ke-: ".$commentId;
+});
 
-// Route::get('/articles/{id}', function ($id) {
-//     return "Halaman Artikel dengan ID $id";
-// });
+Route::get('/articles/{id}', function ($id) {
+    return "Halaman Artikel dengan ID $id";
+});
 
-// Route::get('/user/{name?}', function ($name=null) {
-//     return 'Nama saya '.$name;
-// });
+Route::get('/user/{name?}', function ($name=null) {
+    return 'Nama saya '.$name;
+});
 
-// Route::get('/user/{name?}', function ($name='John') {
-//     return 'Nama saya '.$name;
-// });
+Route::get('/user/{name?}', function ($name='John') {
+    return 'Nama saya '.$name;
+});
 
 Route::get('/hello', [WelcomeController::class,'hello']);
 
-// Route::get('/', [PageController::class,'index']);
-// Route::get('/about/{nama}/{nim}', [PageController::class,'about']);
-// Route::get('/articles', [PageController::class,'articles']);
-// Route::get('/articles/{id}', [PageController::class,'articles']);
+Route::get('/', [PageController::class,'index']);
+Route::get('/about/{nama}/{nim}', [PageController::class,'about']);
+Route::get('/articles', [PageController::class,'articles']);
+Route::get('/articles/{id}', [PageController::class,'articles']);
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about/{nama}/{nim}', [AboutController::class, 'about']);
@@ -81,12 +81,12 @@ Route::resource('photos', PhotoController::class)->except([
     'create', 'store', 'update', 'destroy'
 ]);
 
-// Route::get('/greeting', function () {
-//     return view('hello', ['name' => 'Satriyo']);
-// });
+Route::get('/greeting', function () {
+    return view('hello', ['name' => 'Satriyo']);
+});
 
-// Route::get('/greeting', function () {
-//     return view('blog.hello', ['name' => 'Satriyo']);
-// });
+Route::get('/greeting', function () {
+    return view('blog.hello', ['name' => 'Satriyo']);
+});
 
 Route::get('/greeting', [WelcomeController::class, 'greeting']);
